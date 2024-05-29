@@ -87,11 +87,6 @@ namespace Ark_ASA_Items
 
 
 
-        private void kibble1_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText("cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0");
-        }
-
         private void element1_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0 | cheat GFI Element 100 0 0");
@@ -117,14 +112,19 @@ namespace Ark_ASA_Items
             Clipboard.SetText("cheat gfi ApexDrop_Allo 10 0 0 | cheat gfi ApexDrop_Basilo 10 0 0 | cheat gfi ApexDrop_Basilisk 10 0 0 | cheat gfi ApexDrop_Giga 10 0 0 | cheat gfi ApexDrop_Tuso 10 0 0 | cheat gfi ApexDrop_Rex 10 0 0 | cheat gfi ApexDrop_Yuty 10 0 0 | cheat gfi ApexDrop_Argentavis 10 0 0 | cheat gfi ApexDrop_Sarco 10 0 0 | cheat gfi ApexDrop_PoisonWyvern 10 0 0 | admincheat GFI ApexDrop_FireWyvern 10 1 0 | admincheat GFI ApexDrop_LightningWyvern 10 1 0 | admincheat GFI ApexDrop_Megalodon 10 1 0 | admincheat GFI ApexDrop_Sauro 10 1 0 | cheat GFI ApexDrop_Boa 10 0 0 | admincheat GFI ApexDrop_Megalania 10 0 0 | admincheat GFI ApexDrop_Spino 10 0 0 | admincheat GFI ApexDrop_Theriz 10 0 0 | admincheat GFI ApexDrop_Thylaco 10 0 0");
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void MejoBerrys_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0 | cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0| cheat GFI Berry_Mejoberry 100 0 0");
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void CookedMeat_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0 | cheat GFI cooked 30 0 0");
+        }
+
+        private void Kibble_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0 | cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0| cheat GFI Kibble_Base_Special 100 0 0");
         }
     }
 }

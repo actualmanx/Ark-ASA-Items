@@ -36,7 +36,6 @@
             setTo100 = new Button();
             primeMeatJerky = new Button();
             cookPfishmeat = new Button();
-            kibble1 = new Button();
             element1 = new Button();
             bioToxin1 = new Button();
             shockDarts1 = new Button();
@@ -44,10 +43,10 @@
             tributes1 = new Button();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            mejoBerries = new ToolStripMenuItem();
-            coookedMeat = new ToolStripMenuItem();
-            toolStripMenuItem4 = new ToolStripMenuItem();
-            toolStripMenuItem5 = new ToolStripMenuItem();
+            MejoBerrys = new ToolStripMenuItem();
+            CoookedMeat = new ToolStripMenuItem();
+            Kibble = new ToolStripMenuItem();
+            PriMeatJerky = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -125,17 +124,6 @@
             cookPfishmeat.UseVisualStyleBackColor = true;
             cookPfishmeat.Click += cookPfishmeat_Click;
             // 
-            // kibble1
-            // 
-            kibble1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            kibble1.Location = new Point(36, 589);
-            kibble1.Name = "kibble1";
-            kibble1.Size = new Size(144, 70);
-            kibble1.TabIndex = 9;
-            kibble1.Text = "Kibble";
-            kibble1.UseVisualStyleBackColor = true;
-            kibble1.Click += kibble1_Click;
-            // 
             // element1
             // 
             element1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -203,36 +191,37 @@
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { mejoBerries, coookedMeat, toolStripMenuItem4, toolStripMenuItem5 });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { MejoBerrys, CoookedMeat, Kibble, PriMeatJerky });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(101, 29);
-            toolStripMenuItem1.Text = "Spawn In";
+            toolStripMenuItem1.Size = new Size(144, 29);
+            toolStripMenuItem1.Text = "Meat && Berry's";
             // 
-            // mejoBerries
+            // MejoBerrys
             // 
-            mejoBerries.Name = "mejoBerries";
-            mejoBerries.Size = new Size(273, 34);
-            mejoBerries.Text = "Mejoberry's";
-            mejoBerries.Click += toolStripMenuItem2_Click;
+            MejoBerrys.Name = "MejoBerrys";
+            MejoBerrys.Size = new Size(270, 34);
+            MejoBerrys.Text = "Mejoberry's";
+            MejoBerrys.Click += MejoBerrys_Click;
             // 
-            // coookedMeat
+            // CoookedMeat
             // 
-            coookedMeat.Name = "coookedMeat";
-            coookedMeat.Size = new Size(273, 34);
-            coookedMeat.Text = "Cooked Meat";
-            coookedMeat.Click += toolStripMenuItem3_Click;
+            CoookedMeat.Name = "CoookedMeat";
+            CoookedMeat.Size = new Size(270, 34);
+            CoookedMeat.Text = "Cooked Meat";
+            CoookedMeat.Click += CookedMeat_Click;
             // 
-            // toolStripMenuItem4
+            // Kibble
             // 
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(273, 34);
-            toolStripMenuItem4.Text = "toolStripMenuItem4";
+            Kibble.Name = "Kibble";
+            Kibble.Size = new Size(270, 34);
+            Kibble.Text = "Kibble";
+            Kibble.Click += Kibble_Click;
             // 
-            // toolStripMenuItem5
+            // PriMeatJerky
             // 
-            toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(273, 34);
-            toolStripMenuItem5.Text = "toolStripMenuItem5";
+            PriMeatJerky.Name = "PriMeatJerky";
+            PriMeatJerky.Size = new Size(270, 34);
+            PriMeatJerky.Text = "Prime Meat Jerky";
             // 
             // Form1
             // 
@@ -247,7 +236,6 @@
             Controls.Add(shockDarts1);
             Controls.Add(bioToxin1);
             Controls.Add(element1);
-            Controls.Add(kibble1);
             Controls.Add(cookPfishmeat);
             Controls.Add(primeMeatJerky);
             Controls.Add(setTo100);
@@ -277,7 +265,6 @@
         private Button setTo100;
         private Button primeMeatJerky;
         private Button cookPfishmeat;
-        private Button kibble1;
         private Button element1;
         private Button bioToxin1;
         private Button shockDarts1;
@@ -285,9 +272,9 @@
         private Button tributes1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem mejoBerries;
-        private ToolStripMenuItem coookedMeat;
-        private ToolStripMenuItem toolStripMenuItem4;
-        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem MejoBerrys;
+        private ToolStripMenuItem CoookedMeat;
+        private ToolStripMenuItem Kibble;
+        private ToolStripMenuItem PriMeatJerky;
     }
 }
