@@ -34,20 +34,25 @@
             addToButton = new Button();
             copyText = new Button();
             setTo100 = new Button();
-            primeMeatJerky = new Button();
-            cookPfishmeat = new Button();
-            element1 = new Button();
-            bioToxin1 = new Button();
-            shockDarts1 = new Button();
-            artifacts1 = new Button();
-            tributes1 = new Button();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             MejoBerrys = new ToolStripMenuItem();
             CoookedMeat = new ToolStripMenuItem();
             Kibble = new ToolStripMenuItem();
             PriMeatJerky = new ToolStripMenuItem();
+            CookedPrimeFishMeat = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            ShockDarts = new ToolStripMenuItem();
+            BioToxin = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            Element = new ToolStripMenuItem();
+            Tributes = new ToolStripMenuItem();
+            Artifacts = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            statusLabel1 = new ToolStripStatusLabel();
+            QualityAscendent = new Button();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // logBox1
@@ -102,87 +107,10 @@
             setTo100.UseVisualStyleBackColor = true;
             setTo100.Click += setTo100_Click;
             // 
-            // primeMeatJerky
-            // 
-            primeMeatJerky.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            primeMeatJerky.Location = new Point(486, 589);
-            primeMeatJerky.Name = "primeMeatJerky";
-            primeMeatJerky.Size = new Size(144, 70);
-            primeMeatJerky.TabIndex = 5;
-            primeMeatJerky.Text = "Prime Meat Jerky";
-            primeMeatJerky.UseVisualStyleBackColor = true;
-            primeMeatJerky.Click += primeMeatJerky_Click;
-            // 
-            // cookPfishmeat
-            // 
-            cookPfishmeat.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            cookPfishmeat.Location = new Point(636, 589);
-            cookPfishmeat.Name = "cookPfishmeat";
-            cookPfishmeat.Size = new Size(144, 70);
-            cookPfishmeat.TabIndex = 7;
-            cookPfishmeat.Text = "Cooked Prime Fish Meat";
-            cookPfishmeat.UseVisualStyleBackColor = true;
-            cookPfishmeat.Click += cookPfishmeat_Click;
-            // 
-            // element1
-            // 
-            element1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            element1.Location = new Point(186, 589);
-            element1.Name = "element1";
-            element1.Size = new Size(144, 70);
-            element1.TabIndex = 10;
-            element1.Text = "Element";
-            element1.UseVisualStyleBackColor = true;
-            element1.Click += element1_Click;
-            // 
-            // bioToxin1
-            // 
-            bioToxin1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            bioToxin1.Location = new Point(336, 589);
-            bioToxin1.Name = "bioToxin1";
-            bioToxin1.Size = new Size(144, 70);
-            bioToxin1.TabIndex = 11;
-            bioToxin1.Text = "Bio Toxin";
-            bioToxin1.UseVisualStyleBackColor = true;
-            bioToxin1.Click += bioToxin1_Click;
-            // 
-            // shockDarts1
-            // 
-            shockDarts1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            shockDarts1.Location = new Point(786, 589);
-            shockDarts1.Name = "shockDarts1";
-            shockDarts1.Size = new Size(144, 70);
-            shockDarts1.TabIndex = 12;
-            shockDarts1.Text = "Shock Darts";
-            shockDarts1.UseVisualStyleBackColor = true;
-            shockDarts1.Click += shockDarts1_Click;
-            // 
-            // artifacts1
-            // 
-            artifacts1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            artifacts1.Location = new Point(936, 589);
-            artifacts1.Name = "artifacts1";
-            artifacts1.Size = new Size(144, 70);
-            artifacts1.TabIndex = 13;
-            artifacts1.Text = "Artifacts";
-            artifacts1.UseVisualStyleBackColor = true;
-            artifacts1.Click += artifacts1_Click;
-            // 
-            // tributes1
-            // 
-            tributes1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            tributes1.Location = new Point(1086, 589);
-            tributes1.Name = "tributes1";
-            tributes1.Size = new Size(144, 70);
-            tributes1.TabIndex = 14;
-            tributes1.Text = "Tributes";
-            tributes1.UseVisualStyleBackColor = true;
-            tributes1.Click += tributes1_Click;
-            // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1262, 33);
@@ -191,7 +119,7 @@
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { MejoBerrys, CoookedMeat, Kibble, PriMeatJerky });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { MejoBerrys, CoookedMeat, Kibble, PriMeatJerky, CookedPrimeFishMeat });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(144, 29);
             toolStripMenuItem1.Text = "Meat && Berry's";
@@ -199,29 +127,110 @@
             // MejoBerrys
             // 
             MejoBerrys.Name = "MejoBerrys";
-            MejoBerrys.Size = new Size(270, 34);
+            MejoBerrys.Size = new Size(307, 34);
             MejoBerrys.Text = "Mejoberry's";
             MejoBerrys.Click += MejoBerrys_Click;
             // 
             // CoookedMeat
             // 
             CoookedMeat.Name = "CoookedMeat";
-            CoookedMeat.Size = new Size(270, 34);
+            CoookedMeat.Size = new Size(307, 34);
             CoookedMeat.Text = "Cooked Meat";
             CoookedMeat.Click += CookedMeat_Click;
             // 
             // Kibble
             // 
             Kibble.Name = "Kibble";
-            Kibble.Size = new Size(270, 34);
+            Kibble.Size = new Size(307, 34);
             Kibble.Text = "Kibble";
             Kibble.Click += Kibble_Click;
             // 
             // PriMeatJerky
             // 
             PriMeatJerky.Name = "PriMeatJerky";
-            PriMeatJerky.Size = new Size(270, 34);
+            PriMeatJerky.Size = new Size(307, 34);
             PriMeatJerky.Text = "Prime Meat Jerky";
+            PriMeatJerky.Click += PriMeatJerky_Click;
+            // 
+            // CookedPrimeFishMeat
+            // 
+            CookedPrimeFishMeat.Name = "CookedPrimeFishMeat";
+            CookedPrimeFishMeat.Size = new Size(307, 34);
+            CookedPrimeFishMeat.Text = "Cooked Prime Fish Meat";
+            CookedPrimeFishMeat.Click += CookedPrimeFishMeat_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { ShockDarts, BioToxin });
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(85, 29);
+            toolStripMenuItem2.Text = "Taming";
+            // 
+            // ShockDarts
+            // 
+            ShockDarts.Name = "ShockDarts";
+            ShockDarts.Size = new Size(213, 34);
+            ShockDarts.Text = "Shock Dart's";
+            ShockDarts.Click += ShockDarts_Click;
+            // 
+            // BioToxin
+            // 
+            BioToxin.Name = "BioToxin";
+            BioToxin.Size = new Size(213, 34);
+            BioToxin.Text = "Bio Toxin";
+            BioToxin.Click += BioToxin_Click;
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.DropDownItems.AddRange(new ToolStripItem[] { Element, Tributes, Artifacts });
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(122, 29);
+            toolStripMenuItem3.Text = "Boss Fight's";
+            // 
+            // Element
+            // 
+            Element.Name = "Element";
+            Element.Size = new Size(179, 34);
+            Element.Text = "Element";
+            Element.Click += Element_Click;
+            // 
+            // Tributes
+            // 
+            Tributes.Name = "Tributes";
+            Tributes.Size = new Size(179, 34);
+            Tributes.Text = "Tributes";
+            Tributes.Click += Tributes_Click;
+            // 
+            // Artifacts
+            // 
+            Artifacts.Name = "Artifacts";
+            Artifacts.Size = new Size(179, 34);
+            Artifacts.Text = "Artifacts";
+            Artifacts.Click += Artifacts_Click;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.ImageScalingSize = new Size(24, 24);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { statusLabel1 });
+            statusStrip1.Location = new Point(0, 649);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(1262, 32);
+            statusStrip1.TabIndex = 16;
+            // 
+            // statusLabel1
+            // 
+            statusLabel1.Name = "statusLabel1";
+            statusLabel1.Size = new Size(370, 25);
+            statusLabel1.Text = "Welcome to Ark SA Copy And Paste Spawner";
+            // 
+            // QualityAscendent
+            // 
+            QualityAscendent.Location = new Point(1098, 323);
+            QualityAscendent.Name = "QualityAscendent";
+            QualityAscendent.Size = new Size(112, 53);
+            QualityAscendent.TabIndex = 17;
+            QualityAscendent.Text = "Acendent";
+            QualityAscendent.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -231,13 +240,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1262, 681);
-            Controls.Add(tributes1);
-            Controls.Add(artifacts1);
-            Controls.Add(shockDarts1);
-            Controls.Add(bioToxin1);
-            Controls.Add(element1);
-            Controls.Add(cookPfishmeat);
-            Controls.Add(primeMeatJerky);
+            Controls.Add(QualityAscendent);
+            Controls.Add(statusStrip1);
             Controls.Add(setTo100);
             Controls.Add(copyText);
             Controls.Add(addToButton);
@@ -249,9 +253,11 @@
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(1284, 737);
             Name = "Form1";
-            Text = "Ark ASA Spawner";
+            Text = "Ark SA Spawner";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,18 +269,22 @@
         private Button addToButton;
         private Button copyText;
         private Button setTo100;
-        private Button primeMeatJerky;
-        private Button cookPfishmeat;
-        private Button element1;
-        private Button bioToxin1;
-        private Button shockDarts1;
-        private Button artifacts1;
-        private Button tributes1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem MejoBerrys;
         private ToolStripMenuItem CoookedMeat;
         private ToolStripMenuItem Kibble;
         private ToolStripMenuItem PriMeatJerky;
+        private ToolStripMenuItem CookedPrimeFishMeat;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel statusLabel1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem ShockDarts;
+        private ToolStripMenuItem BioToxin;
+        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem Element;
+        private ToolStripMenuItem Tributes;
+        private ToolStripMenuItem Artifacts;
+        private Button QualityAscendent;
     }
 }
