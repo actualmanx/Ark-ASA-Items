@@ -51,6 +51,11 @@
             statusStrip1 = new StatusStrip();
             statusLabel1 = new ToolStripStatusLabel();
             QualityAscendent = new Button();
+            howManyBox1 = new TextBox();
+            qualityBox1 = new TextBox();
+            blueprintBox1 = new CheckBox();
+            howMany = new Label();
+            quality = new Label();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -70,19 +75,19 @@
             inputBox1.AllowDrop = true;
             inputBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             inputBox1.Cursor = Cursors.IBeam;
-            inputBox1.Location = new Point(819, 67);
+            inputBox1.Location = new Point(774, 69);
             inputBox1.Name = "inputBox1";
-            inputBox1.Size = new Size(349, 31);
+            inputBox1.Size = new Size(436, 31);
             inputBox1.TabIndex = 1;
             // 
             // addToButton
             // 
             addToButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            addToButton.Location = new Point(1098, 254);
+            addToButton.Location = new Point(1098, 248);
             addToButton.Name = "addToButton";
             addToButton.Size = new Size(112, 53);
             addToButton.TabIndex = 2;
-            addToButton.Text = "Add 1";
+            addToButton.Text = "Add";
             addToButton.UseVisualStyleBackColor = true;
             addToButton.Click += addToButton_Click;
             // 
@@ -99,11 +104,11 @@
             // setTo100
             // 
             setTo100.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            setTo100.Location = new Point(1098, 195);
+            setTo100.Location = new Point(1098, 131);
             setTo100.Name = "setTo100";
             setTo100.Size = new Size(112, 53);
             setTo100.TabIndex = 4;
-            setTo100.Text = "Add 100";
+            setTo100.Text = "100";
             setTo100.UseVisualStyleBackColor = true;
             setTo100.Click += setTo100_Click;
             // 
@@ -126,6 +131,7 @@
             // 
             // MejoBerrys
             // 
+            MejoBerrys.Image = (Image)resources.GetObject("MejoBerrys.Image");
             MejoBerrys.Name = "MejoBerrys";
             MejoBerrys.Size = new Size(307, 34);
             MejoBerrys.Text = "Mejoberry's";
@@ -133,6 +139,7 @@
             // 
             // CoookedMeat
             // 
+            CoookedMeat.Image = (Image)resources.GetObject("CoookedMeat.Image");
             CoookedMeat.Name = "CoookedMeat";
             CoookedMeat.Size = new Size(307, 34);
             CoookedMeat.Text = "Cooked Meat";
@@ -140,6 +147,7 @@
             // 
             // Kibble
             // 
+            Kibble.Image = (Image)resources.GetObject("Kibble.Image");
             Kibble.Name = "Kibble";
             Kibble.Size = new Size(307, 34);
             Kibble.Text = "Kibble";
@@ -147,6 +155,7 @@
             // 
             // PriMeatJerky
             // 
+            PriMeatJerky.Image = (Image)resources.GetObject("PriMeatJerky.Image");
             PriMeatJerky.Name = "PriMeatJerky";
             PriMeatJerky.Size = new Size(307, 34);
             PriMeatJerky.Text = "Prime Meat Jerky";
@@ -154,6 +163,7 @@
             // 
             // CookedPrimeFishMeat
             // 
+            CookedPrimeFishMeat.Image = (Image)resources.GetObject("CookedPrimeFishMeat.Image");
             CookedPrimeFishMeat.Name = "CookedPrimeFishMeat";
             CookedPrimeFishMeat.Size = new Size(307, 34);
             CookedPrimeFishMeat.Text = "Cooked Prime Fish Meat";
@@ -168,15 +178,17 @@
             // 
             // ShockDarts
             // 
+            ShockDarts.Image = (Image)resources.GetObject("ShockDarts.Image");
             ShockDarts.Name = "ShockDarts";
-            ShockDarts.Size = new Size(213, 34);
+            ShockDarts.Size = new Size(270, 34);
             ShockDarts.Text = "Shock Dart's";
             ShockDarts.Click += ShockDarts_Click;
             // 
             // BioToxin
             // 
+            BioToxin.Image = (Image)resources.GetObject("BioToxin.Image");
             BioToxin.Name = "BioToxin";
-            BioToxin.Size = new Size(213, 34);
+            BioToxin.Size = new Size(270, 34);
             BioToxin.Text = "Bio Toxin";
             BioToxin.Click += BioToxin_Click;
             // 
@@ -189,22 +201,25 @@
             // 
             // Element
             // 
+            Element.Image = (Image)resources.GetObject("Element.Image");
             Element.Name = "Element";
-            Element.Size = new Size(179, 34);
+            Element.Size = new Size(270, 34);
             Element.Text = "Element";
             Element.Click += Element_Click;
             // 
             // Tributes
             // 
+            Tributes.Image = (Image)resources.GetObject("Tributes.Image");
             Tributes.Name = "Tributes";
-            Tributes.Size = new Size(179, 34);
+            Tributes.Size = new Size(270, 34);
             Tributes.Text = "Tributes";
             Tributes.Click += Tributes_Click;
             // 
             // Artifacts
             // 
+            Artifacts.Image = (Image)resources.GetObject("Artifacts.Image");
             Artifacts.Name = "Artifacts";
-            Artifacts.Size = new Size(179, 34);
+            Artifacts.Size = new Size(270, 34);
             Artifacts.Text = "Artifacts";
             Artifacts.Click += Artifacts_Click;
             // 
@@ -225,12 +240,64 @@
             // 
             // QualityAscendent
             // 
-            QualityAscendent.Location = new Point(1098, 323);
+            QualityAscendent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            QualityAscendent.Location = new Point(1098, 189);
             QualityAscendent.Name = "QualityAscendent";
             QualityAscendent.Size = new Size(112, 53);
             QualityAscendent.TabIndex = 17;
-            QualityAscendent.Text = "Acendent";
+            QualityAscendent.Text = "100";
             QualityAscendent.UseVisualStyleBackColor = true;
+            QualityAscendent.Click += QualityAscendent_Click;
+            // 
+            // howManyBox1
+            // 
+            howManyBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            howManyBox1.Location = new Point(932, 142);
+            howManyBox1.Name = "howManyBox1";
+            howManyBox1.Size = new Size(150, 31);
+            howManyBox1.TabIndex = 19;
+            howManyBox1.Text = "1";
+            // 
+            // qualityBox1
+            // 
+            qualityBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            qualityBox1.Location = new Point(932, 200);
+            qualityBox1.Name = "qualityBox1";
+            qualityBox1.Size = new Size(150, 31);
+            qualityBox1.TabIndex = 20;
+            qualityBox1.Text = "1";
+            // 
+            // blueprintBox1
+            // 
+            blueprintBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            blueprintBox1.AutoSize = true;
+            blueprintBox1.Location = new Point(932, 261);
+            blueprintBox1.Name = "blueprintBox1";
+            blueprintBox1.Size = new Size(126, 29);
+            blueprintBox1.TabIndex = 21;
+            blueprintBox1.Text = "Is Blueprint";
+            blueprintBox1.UseVisualStyleBackColor = true;
+            blueprintBox1.CheckedChanged += blueprintBox1_CheckedChanged;
+            // 
+            // howMany
+            // 
+            howMany.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            howMany.AutoSize = true;
+            howMany.Location = new Point(774, 145);
+            howMany.Name = "howMany";
+            howMany.Size = new Size(80, 25);
+            howMany.TabIndex = 22;
+            howMany.Text = "Quantity";
+            // 
+            // quality
+            // 
+            quality.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            quality.AutoSize = true;
+            quality.Location = new Point(774, 203);
+            quality.Name = "quality";
+            quality.Size = new Size(140, 25);
+            quality.TabIndex = 23;
+            quality.Text = "Quality 1 to 100";
             // 
             // Form1
             // 
@@ -240,6 +307,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1262, 681);
+            Controls.Add(quality);
+            Controls.Add(howMany);
+            Controls.Add(blueprintBox1);
+            Controls.Add(qualityBox1);
+            Controls.Add(howManyBox1);
             Controls.Add(QualityAscendent);
             Controls.Add(statusStrip1);
             Controls.Add(setTo100);
@@ -286,5 +358,10 @@
         private ToolStripMenuItem Tributes;
         private ToolStripMenuItem Artifacts;
         private Button QualityAscendent;
+        private TextBox howManyBox1;
+        private TextBox qualityBox1;
+        private CheckBox blueprintBox1;
+        private Label howMany;
+        private Label quality;
     }
 }

@@ -1,4 +1,7 @@
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Ark_ASA_Items
 {
@@ -8,70 +11,89 @@ namespace Ark_ASA_Items
         {
             InitializeComponent();
             ActiveControl = inputBox1;
+
         }
 
         private void addToButton_Click(object sender, EventArgs e)
         {
-            if (inputBox1.Text.Contains("1 1 0") || (inputBox1.Text.Contains("100 1 0")))
+
+            if (string.IsNullOrEmpty(inputBox1.Text))
             {
+                ActiveControl = inputBox1; // Do something...
+            }
+            else
+            {
+                int v = blueprintBox1.Checked ? 1 : 0;
+                string input = inputBox1.Text;
+                string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
+                // Get the new numbers from the textboxes
+                string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
+                string result = Regex.Replace(input, pattern, replacement);
+                inputBox1.Text = result;
                 logBox1.AppendText(inputBox1.Text);
                 logBox1.AppendText(" | ");
                 inputBox1.Clear();
                 ActiveControl = inputBox1;
             }
-            else
-            {
-                inputBox1.Clear();
-                ActiveControl = inputBox1;
-            }
-            /*if (inputBox1.Text == "")
-            {
-                ActiveControl = inputBox1;
-            }
-            else
-            {
-                logBox1.AppendText(" | ");
-                inputBox1.Clear();
-                ActiveControl = inputBox1;
-            }*/
+
         }
 
 
         private void copyText_Click(object sender, EventArgs e)
         {
-
-            Clipboard.SetText(logBox1.Text);
-            logBox1.Clear();
+            if (!string.IsNullOrEmpty(logBox1.Text))
+            {
+                Clipboard.SetText(logBox1.Text);
+                logBox1.Clear();
+            }
             ActiveControl = inputBox1;
         }
 
         private void setTo100_Click(object sender, EventArgs e)
         {
-            string source = inputBox1.Text;
-            // Remove a substring from the middle of the string.
-            string toRemove = "1 1 0";
-            string result = string.Empty;
-            int i = source.IndexOf(toRemove);
-            if (i >= 0)
+            if (setTo100.Text == "100")
             {
-                result = source.Remove(i, toRemove.Length);
-                inputBox1.Text = (result);
-                inputBox1.AppendText("100 1 0");
-                logBox1.AppendText(inputBox1.Text);
-                logBox1.AppendText(" | ");
-                inputBox1.Clear();
-                ActiveControl = inputBox1;
-
+                setTo100.Text = "1";
+                howManyBox1.Text = "100";
             }
             else
             {
-                inputBox1.Clear();
-                ActiveControl = inputBox1;
+                setTo100.Text = "100";
+                howManyBox1.Text = "1";
             }
+            // howManyBox1.Text = "100";
+            // setTo100.Text = "1";
+            int v = blueprintBox1.Checked ? 1 : 0;
+            string input = inputBox1.Text;
+            string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
+            // Get the new numbers from the textboxes
+            string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
+            string result = Regex.Replace(input, pattern, replacement);
+            inputBox1.Text = result;
+            ActiveControl = inputBox1;
 
+        }
 
-
-
+        private void QualityAscendent_Click(object sender, EventArgs e)
+        {
+            if (qualityBox1.Text == "100")
+            {
+                qualityBox1.Text = "1";
+                QualityAscendent.Text = "100";
+            }
+            else
+            {
+                qualityBox1.Text = "100";
+                QualityAscendent.Text = "1";
+            }
+            int v = blueprintBox1.Checked ? 1 : 0;
+            string input = inputBox1.Text;
+            string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
+            // Get the new numbers from the textboxes
+            string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
+            string result = Regex.Replace(input, pattern, replacement);
+            inputBox1.Text = result;
+            ActiveControl = inputBox1;
         }
 
 
@@ -153,6 +175,18 @@ namespace Ark_ASA_Items
             statusLabel1.Text = "Artifacts Copied";
             await Task.Delay(3_000);
             statusLabel1.Text = "";
+        }
+
+        private void blueprintBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            int v = blueprintBox1.Checked ? 1 : 0;
+            string input = inputBox1.Text;
+            string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
+            // Get the new numbers from the textboxes
+            string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
+            string result = Regex.Replace(input, pattern, replacement);
+            inputBox1.Text = result;
+            ActiveControl = inputBox1;
         }
     }
 }
