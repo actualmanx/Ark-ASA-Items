@@ -2,6 +2,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System;
 
 namespace Ark_ASA_Items
 {
@@ -39,14 +40,18 @@ namespace Ark_ASA_Items
         }
 
 
-        private void copyText_Click(object sender, EventArgs e)
+        private async void copyText_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(logBox1.Text))
             {
                 Clipboard.SetText(logBox1.Text);
                 logBox1.Clear();
+                statusLabel1.Text = "Copied To Clipboard";
+                await Task.Delay(3_000);
+                statusLabel1.Text = "";
             }
             ActiveControl = inputBox1;
+
         }
 
         private void setTo100_Click(object sender, EventArgs e)
@@ -94,6 +99,32 @@ namespace Ark_ASA_Items
             string result = Regex.Replace(input, pattern, replacement);
             inputBox1.Text = result;
             ActiveControl = inputBox1;
+        }
+
+
+        private void blueprintBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            int v = blueprintBox1.Checked ? 1 : 0;
+            string input = inputBox1.Text;
+            string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
+            // Get the new numbers from the textboxes
+            string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
+            string result = Regex.Replace(input, pattern, replacement);
+            inputBox1.Text = result;
+            ActiveControl = inputBox1;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                string clipboardText = Clipboard.GetText();
+                inputBox1.Text = clipboardText;
+            }
+            else
+            {
+                MessageBox.Show("The clipboard does not contain any text.");
+            }
         }
 
 
@@ -163,7 +194,7 @@ namespace Ark_ASA_Items
 
         private async void Tributes_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("cheat gfi ApexDrop_Allo 10 0 0 | cheat gfi ApexDrop_Basilo 10 0 0 | cheat gfi ApexDrop_Basilisk 10 0 0 | cheat gfi ApexDrop_Giga 10 0 0 | cheat gfi ApexDrop_Tuso 10 0 0 | cheat gfi ApexDrop_Rex 10 0 0 | cheat gfi ApexDrop_Yuty 10 0 0 | cheat gfi ApexDrop_Argentavis 10 0 0 | cheat gfi ApexDrop_Sarco 10 0 0 | cheat gfi ApexDrop_PoisonWyvern 10 0 0 | admincheat GFI ApexDrop_FireWyvern 10 1 0 | admincheat GFI ApexDrop_LightningWyvern 10 1 0 | admincheat GFI ApexDrop_Megalodon 10 1 0 | admincheat GFI ApexDrop_Sauro 10 1 0 | cheat GFI ApexDrop_Boa 10 0 0 | admincheat GFI ApexDrop_Megalania 10 0 0 | admincheat GFI ApexDrop_Spino 10 0 0 | admincheat GFI ApexDrop_Theriz 10 0 0 | admincheat GFI ApexDrop_Thylaco 10 0 0");
+            Clipboard.SetText("cheat GFI ApexDrop_Allo 10 0 0 | cheat GFI ApexDrop_Basilo 10 0 0 | cheat GFI ApexDrop_Basilisk 10 0 0 | cheat GFI ApexDrop_Giga 10 0 0 | cheat GFI ApexDrop_Tuso 10 0 0 | cheat GFI ApexDrop_Rex 10 0 0 | cheat GFI ApexDrop_Yuty 10 0 0 | cheat GFI ApexDrop_Argentavis 10 0 0 | cheat GFI ApexDrop_Sarco 10 0 0 | cheat GFI ApexDrop_PoisonWyvern 10 0 0 | admincheat GFI ApexDrop_FireWyvern 10 1 0 | admincheat GFI ApexDrop_LightningWyvern 10 1 0 | admincheat GFI ApexDrop_Megalodon 10 1 0 | admincheat GFI ApexDrop_Sauro 10 1 0 | cheat GFI ApexDrop_Boa 10 0 0 | admincheat GFI ApexDrop_Megalania 10 0 0 | admincheat GFI ApexDrop_Spino 10 0 0 | admincheat GFI ApexDrop_Theriz 10 0 0 | admincheat GFI ApexDrop_Thylaco 10 0 0");
             statusLabel1.Text = "Tributes Copied";
             await Task.Delay(3_000);
             statusLabel1.Text = "";
@@ -171,22 +202,27 @@ namespace Ark_ASA_Items
 
         private async void Artifacts_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("cheat gfi Extinction_DesertKaiju 1 0 0 | cheat gfi Extinction_ForestKaiju 1 0 0 | cheat gfi Artifact_12 1 0 0 | cheat gfi Artifact_05 1 0 0 | cheat gfi ArtifactSE_02 1 0 0 | cheat gfi Artifact_11 1 0 0 | cheat gfi ArtifactAB 1 0 0 | cheat gfi ArtifactSE_03 1 0 0 | cheat gfi Artifact_04 1 0 0 | cheat gfi Artifact_07 1 0 0 | cheat gfi ArtifactSE_01 1 0 0 | cheat gfi Artifact_01 1 0 0 | cheat gfi Artifact_08 1 0 0 | cheat gfi ArtifactAB_4 1 0 0 | cheat gfi Artifact_03 1 0 0 | cheat gfi Artifact_02 1 0 0 | cheat gfi ArtifactAB_2 1 0 0 | cheat gfi Artifact_06 1 0 0 | cheat gfi ArtifactAB_3 1 0 0 | cheat gfi Artifact_09 1 0 0 | cheat gfi Extinction_IceKaiju 1 0 0");
+            Clipboard.SetText("cheat GFI Extinction_DesertKaiju 1 0 0 | cheat GFI Extinction_ForestKaiju 1 0 0 | cheat GFI Artifact_12 1 0 0 | cheat GFI Artifact_05 1 0 0 | cheat GFI ArtifactSE_02 1 0 0 | cheat GFI Artifact_11 1 0 0 | cheat GFI ArtifactAB 1 0 0 | cheat GFI ArtifactSE_03 1 0 0 | cheat GFI Artifact_04 1 0 0 | cheat GFI Artifact_07 1 0 0 | cheat GFI ArtifactSE_01 1 0 0 | cheat GFI Artifact_01 1 0 0 | cheat GFI Artifact_08 1 0 0 | cheat GFI ArtifactAB_4 1 0 0 | cheat GFI Artifact_03 1 0 0 | cheat GFI Artifact_02 1 0 0 | cheat GFI ArtifactAB_2 1 0 0 | cheat GFI Artifact_06 1 0 0 | cheat GFI ArtifactAB_3 1 0 0 | cheat GFI Artifact_09 1 0 0 | cheat GFI Extinction_IceKaiju 1 0 0");
             statusLabel1.Text = "Artifacts Copied";
             await Task.Delay(3_000);
             statusLabel1.Text = "";
         }
 
-        private void blueprintBox1_CheckedChanged(object sender, EventArgs e)
+
+        private async void TranqArrow_Click(object sender, EventArgs e)
         {
-            int v = blueprintBox1.Checked ? 1 : 0;
-            string input = inputBox1.Text;
-            string pattern = @"(\d+)\s+(\d+)\s+(\d+)$"; // Matches the last three numbers
-            // Get the new numbers from the textboxes
-            string replacement = $"{howManyBox1.Text} {qualityBox1.Text} {v}";
-            string result = Regex.Replace(input, pattern, replacement);
-            inputBox1.Text = result;
-            ActiveControl = inputBox1;
+            Clipboard.SetText("cheat GFI ArrowTranq 100 0 0");
+            statusLabel1.Text = "100 Tranq Arrow's Copied";
+            await Task.Delay(3_000);
+            statusLabel1.Text = "";
+        }
+
+        private async void TranqDarts_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText("cheat GFI TranqDart 100 0 0");
+            statusLabel1.Text = "100 Tranq Dart's Copied";
+            await Task.Delay(3_000);
+            statusLabel1.Text = "";
         }
     }
 }

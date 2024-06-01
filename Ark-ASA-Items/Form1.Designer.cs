@@ -44,6 +44,8 @@
             toolStripMenuItem2 = new ToolStripMenuItem();
             ShockDarts = new ToolStripMenuItem();
             BioToxin = new ToolStripMenuItem();
+            tranqArrow = new ToolStripMenuItem();
+            TranqDarts = new ToolStripMenuItem();
             toolStripMenuItem3 = new ToolStripMenuItem();
             Element = new ToolStripMenuItem();
             Tributes = new ToolStripMenuItem();
@@ -56,12 +58,14 @@
             blueprintBox1 = new CheckBox();
             howMany = new Label();
             quality = new Label();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // logBox1
             // 
+            logBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             logBox1.Location = new Point(27, 104);
             logBox1.Name = "logBox1";
             logBox1.ReadOnly = true;
@@ -93,6 +97,7 @@
             // 
             // copyText
             // 
+            copyText.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             copyText.Location = new Point(27, 254);
             copyText.Name = "copyText";
             copyText.Size = new Size(112, 53);
@@ -171,7 +176,7 @@
             // 
             // toolStripMenuItem2
             // 
-            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { ShockDarts, BioToxin });
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { ShockDarts, BioToxin, tranqArrow, TranqDarts });
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(85, 29);
             toolStripMenuItem2.Text = "Taming";
@@ -180,7 +185,7 @@
             // 
             ShockDarts.Image = (Image)resources.GetObject("ShockDarts.Image");
             ShockDarts.Name = "ShockDarts";
-            ShockDarts.Size = new Size(270, 34);
+            ShockDarts.Size = new Size(213, 34);
             ShockDarts.Text = "Shock Dart's";
             ShockDarts.Click += ShockDarts_Click;
             // 
@@ -188,9 +193,25 @@
             // 
             BioToxin.Image = (Image)resources.GetObject("BioToxin.Image");
             BioToxin.Name = "BioToxin";
-            BioToxin.Size = new Size(270, 34);
+            BioToxin.Size = new Size(213, 34);
             BioToxin.Text = "Bio Toxin";
             BioToxin.Click += BioToxin_Click;
+            // 
+            // tranqArrow
+            // 
+            tranqArrow.Image = (Image)resources.GetObject("tranqArrow.Image");
+            tranqArrow.Name = "tranqArrow";
+            tranqArrow.Size = new Size(213, 34);
+            tranqArrow.Text = "Tranq Arrow";
+            tranqArrow.Click += TranqArrow_Click;
+            // 
+            // TranqDarts
+            // 
+            TranqDarts.Image = (Image)resources.GetObject("TranqDarts.Image");
+            TranqDarts.Name = "TranqDarts";
+            TranqDarts.Size = new Size(213, 34);
+            TranqDarts.Text = "Tranq Dart's";
+            TranqDarts.Click += TranqDarts_Click;
             // 
             // toolStripMenuItem3
             // 
@@ -203,7 +224,7 @@
             // 
             Element.Image = (Image)resources.GetObject("Element.Image");
             Element.Name = "Element";
-            Element.Size = new Size(270, 34);
+            Element.Size = new Size(179, 34);
             Element.Text = "Element";
             Element.Click += Element_Click;
             // 
@@ -211,7 +232,7 @@
             // 
             Tributes.Image = (Image)resources.GetObject("Tributes.Image");
             Tributes.Name = "Tributes";
-            Tributes.Size = new Size(270, 34);
+            Tributes.Size = new Size(179, 34);
             Tributes.Text = "Tributes";
             Tributes.Click += Tributes_Click;
             // 
@@ -219,7 +240,7 @@
             // 
             Artifacts.Image = (Image)resources.GetObject("Artifacts.Image");
             Artifacts.Name = "Artifacts";
-            Artifacts.Size = new Size(270, 34);
+            Artifacts.Size = new Size(179, 34);
             Artifacts.Text = "Artifacts";
             Artifacts.Click += Artifacts_Click;
             // 
@@ -299,6 +320,17 @@
             quality.TabIndex = 23;
             quality.Text = "Quality 1 to 100";
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.Location = new Point(1098, 514);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 68);
+            button1.TabIndex = 24;
+            button1.Text = "Paste Or CTRL V";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AcceptButton = addToButton;
@@ -307,6 +339,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1262, 681);
+            Controls.Add(button1);
             Controls.Add(quality);
             Controls.Add(howMany);
             Controls.Add(blueprintBox1);
@@ -363,5 +396,8 @@
         private CheckBox blueprintBox1;
         private Label howMany;
         private Label quality;
+        private ToolStripMenuItem tranqArrow;
+        private Button button1;
+        private ToolStripMenuItem TranqDarts;
     }
 }
